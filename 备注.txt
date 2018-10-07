@@ -1,0 +1,29 @@
+相关链接
+http://www.0quan8.com
+https://pub.alimama.com
+
+女装（nvzhuang）
+https://pub.alimama.com/items/channel/qqhd.json?spm=a219t.7900221%2F1.1998910419.d435ff811.2a8f75a5lCJwsg&channel=qqhd&toPage=1&sortType=9&dpyhq=1&catIds=1&level=1&perPageSize=50&shopTag=dpyhq&t=1538908013677&_tb_token_=384ef78f575e7&pvid=19_183.48.30.9_9025_1538908012870
+https://pub.alimama.com/items/channel/qqhd.json?spm=a219t.7900221%2F1.1998910419.d435ff811.2a8f75a5lCJwsg&channel=qqhd&toPage=2&sortType=9&dpyhq=1&catIds=1&level=1&perPageSize=50&shopTag=dpyhq&t=1538908108951&_tb_token_=384ef78f575e7&pvid=19_183.48.30.9_1218_1538908013701
+{
+	ok: true,
+	data: {
+		pageList: [] // 数据
+	}
+}
+
+获取短连接
+https://pub.alimama.com/common/code/getAuctionCode.json?auctionid=572034365351&adzoneid=38361600011&siteid=135900171&scenes=3&tkFinalCampaign=8&channel=tk_qqhd&t=1538908202688&_tb_token_=384ef78f575e7&pvid=19_183.48.30.9_1807_1538908108984
+{
+	ok: true,
+	data: {} // 数据
+}
+
+$.ajax({
+	url: 'http://127.0.0.1:3000/setAPI',
+	type: 'POST',
+	data: {
+		type: 'nvzhuang',
+		data: JSON.stringify(d)
+	}
+})
