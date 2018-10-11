@@ -2,7 +2,10 @@
 	<top-slide-in>
 		<div id="detailsMore" class="pop-inner top-nav-height">
 			<top-nav title="更多详情" @closeHandle="closeHandle" :close="true" :fenlei="true"></top-nav>
-			<iframe id="show-iframe" v-if="!isWeiXin" :style="`width: 100%; height: ${iframeHeight}px`" frameborder=0 :src="details['淘宝客短链接(300天内有效)']"></iframe>
+			<template v-if="!isWeiXin">
+				<loading v-if="showLoad"></loading>
+				<iframe id="show-iframe" :style="`width: 100%; height: ${iframeHeight}px`" frameborder=0 :src="details['淘宝客短链接(300天内有效)']"></iframe>
+			</template>
 			<div class="other" v-else>
 				<div class="title">由于微信限制淘宝链接，复制淘口令到淘宝APP即可查看或者购买，或者使用右上角功能在浏览器打开。</div>
     			<div class="item" v-if="details['淘口令(30天内有效)']">
@@ -23,22 +26,37 @@
 <script>
 	import topNav from '@/components/topNav';
 	import topSlideIn from '@/components/transition/topSlideIn';
+	import loading from '@/components/loading';
+
+	window.iframeLoad = function(){
+		alert(1)
+		document.querySelector('#detailsLoad') && (document.querySelector('#detailsLoad').style.display = 'none');
+	}
 
 	export default {
-		components: { topNav, topSlideIn },
+		components: { topNav, topSlideIn, loading },
 		props: ['details', 'isWeiXin'],
 		data(){
 			return {
-				iframeHeight: 0
+				iframeHeight: 0,
+				showLoad: true
 			}
 		},
 		created(){
 			this.iframeHeight = window.screen.height - document.querySelector('.top-nav').offsetHeight;
 		},
+		mounted(){
+			let n = 0;
+			this.$nextTick(() => {
+				document.getElementById('show-iframe') && (document.getElementById('show-iframe').onload = () => {
+					n && (this.showLoad = false);
+					n++;
+				})
+			});
+		},
 		methods: {
 			closeHandle(){
 				this.$emit('updataData', (obj) => {
-					this.closeGlobalNoScrol();
 					obj.showMore = false;
 				})
 			},

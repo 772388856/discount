@@ -86,11 +86,13 @@ export default new Vuex.Store({
 				img: 'https://m.360buyimg.com/mobilecms/s80x80_jfs/t19120/326/2015194654/5703/bb2c7da9/5ae060d7N7a921d20.png',
 				href: 'tushu'
 			},
+			/*
 			{
 				name: '游戏话费',
 				img: 'https://m.360buyimg.com/mobilecms/s80x80_jfs/t17578/67/1465648027/6136/d89a19c4/5acc58feNeaa2c0ce.png',
 				href: 'youxi'
 			},
+			*/
 			{
 				name: '其他',
 				img: 'https://m.360buyimg.com/mobilecms/s80x80_jfs/t1/5087/19/9144/6283/5bab5954E98fe0327/4b0a41a4a444e0b8.png',

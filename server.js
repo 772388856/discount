@@ -14,6 +14,7 @@ app.use('/lists', express.static('./dist/index.html'));
 app.use('/', express.static('./dist/index.html'));
 app.use('/category', express.static('./dist/index.html'));
 app.use('/details', express.static('./dist/index.html'));
+app.use('/details/*', express.static('./dist/index.html'));
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -86,44 +87,46 @@ app.post('/setAPI', function(req,res){
     res.send('OK')
 });
 
-app.listen(3000);
+app.get('/yzl', function(req, res){
+    function setData(name){
+        var workbook = xlsx.readFile(`./xlsx/${name}`);
+        var excelData = [];
+        var writeFileUrl = path.join(__dirname, `public/api/${name.split('-')[0]}.json`);
 
-/*
-var n = 0;
-$.ajax({
-    url: 'https://pub.alimama.com/items/channel/qqhd.json?spm=a219t.7900221%2F1.1998910419.d435ff811.2a8f75a5lCJwsg&channel=qqhd&toPage=1&sortType=9&dpyhq=1&catIds=1&level=1&perPageSize=50&shopTag=dpyhq&t=1538908013677&_tb_token_=384ef78f575e7&pvid=19_183.48.30.9_9025_1538908012870',
-    dataType: 'json',
-    success: (res) => {
-        if(res.ok && res.data && res.data.pageList && res.data.pageList.length){
-            var timer = setInterval(() => {
-                if(!res.data.pageList[n]) clearInterval(timer);
-                $.ajax({
-                    url: `https://pub.alimama.com/common/code/getAuctionCode.json?auctionid=${res.data.pageList[n].auctionId}&adzoneid=38361600011&siteid=135900171&scenes=3&tkFinalCampaign=8&channel=tk_qqhd&t=1538908202688&_tb_token_=384ef78f575e7&pvid=19_183.48.30.9_1807_1538908108984`,
-                    dataType: 'json',
-                    success: (ress) => {
-                        var o = {};
-                        o = $.extend(o,ress.data, res.data.pageList[n])
-                        $.ajax({
-                            url: 'http://127.0.0.1:3000/setAPI',
-                            type: 'POST',
-                            data: {
-                                type: 'nvzhuang',
-                                data: o
-                            }
-                        })
-                        n++;
-                        console.log(`第${n}个, id: ${res.data.pageList[n].auctionId}`)
-
-                        if(n == res.data.pageList.length){
-                            clearInterval(timer);
-                        }
-                    },
-                    error: () => {
-                        clearInterval(timer);
-                    }
-                })
-            }, 1000)
+        for (var sheet in workbook.Sheets) {
+            if (workbook.Sheets.hasOwnProperty(sheet)) {
+                //解析excel文件得到数据
+                excelData = excelData.concat(xlsx.utils.sheet_to_json(workbook.Sheets[sheet]));
+            }
         }
+        var d = {
+            code: "00",
+            data: excelData
+        }
+        fs.writeFile(writeFileUrl, JSON.stringify(d), function(err) {
+            if (err) {
+                return console.log(err);
+            }
+        });
     }
-})
-*/
+    // 遍历文件
+    function readDirSync(path){
+        var pa = fs.readdirSync(path);
+        pa.forEach(function(ele,index){
+            var info = fs.statSync(path+"/"+ele)    
+            if(info.isDirectory()){
+
+            }else{
+                if(ele != '.DS_Store'){
+                    console.log("读取xlsx: "+ele);
+                    setData(ele);
+                }
+            }   
+        })
+    }
+    readDirSync(path.join(__dirname, 'xlsx'));
+
+    res.send('ok')
+});
+
+app.listen(80);

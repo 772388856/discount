@@ -19,7 +19,7 @@ export default new Router({
       component: () => import('./views/category/')
     },
     {
-      path: '/details',
+      path: '/details/:id',
       name: 'details',
       component: () => import('./views/details/')
     },

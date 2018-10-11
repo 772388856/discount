@@ -3,8 +3,8 @@
     	<top-nav :title="title" :back="true" :fenlei="true"></top-nav>
     	<loading v-if="showLoad" />
         <ul class="lists-box">
-        	<li v-for="list in lists">
-        		<a href="javascript:;" @click="jump(list)" class="line">
+        	<li v-for="(list,index) in lists">
+        		<a href="javascript:;" @click="jump(list, index)" class="line">
         			<div class="img-box">
         				<img :src="list['商品主图']" class="img" />
     				</div>
@@ -64,23 +64,23 @@
 		methods: {
 			...mapActions(['setDetails']),
 			getData(){
-				this.axios.get(`${this.apiUrl}/api/lists/${this.$route.params.id}`).then((res) => {
-					this.lists = res.data;
+				this.axios.get(`${this.apiUrl}/api/${this.$route.params.id}.json`).then((res) => {
+					this.lists = res.data.data;
 					this.showLoad = false;
 				});
 			},
 			getCategory(){
 				this.category.forEach((list, index) => {
 						if(list.href == this.$route.params.id){
-						this.title = list.name;
+						this.title = list.name + ' - 全场9块9';
 					}
 				});
 
 				if(!this.title) location.href = '/lists/nvzhuang';
 			},
-			jump(data){
+			jump(data, index){
 				this.setDetails(data);
-				this.$router.push('/details');
+				this.$router.push(`/details/${this.$route.params.id}-${index}`);
 			}
 		}
 	}

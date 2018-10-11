@@ -1,6 +1,6 @@
 <template>
     <div id="category" class="top-nav-height">
-    	<top-nav title="分类" :back="true"></top-nav>
+    	<top-nav title="分类 - 全场9块9" :back="true"></top-nav>
     	<img src="https://m.360buyimg.com/mobilecms/jfs/t19375/228/2147833578/3539/56b9e876/5ae95f90N06fb6b8e.png" class="category-top-title">
         <ul class="category-box">
         	<li v-for="list in category">

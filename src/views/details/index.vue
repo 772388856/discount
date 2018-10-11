@@ -1,7 +1,8 @@
 <template>
     <div id="details" class="top-nav-height">
-    	<top-nav title="商品详情" :back="true" :fenlei="true"></top-nav>
-        <div class="details-box">
+    	<top-nav title="商品详情 - 全场9块9" :back="true" :fenlei="true"></top-nav>
+    	<loading v-if="showLoad"></loading>
+        <div v-else class="details-box">
         	<img :src="details['商品主图']" class="big-img" />
         	<div class="item">
         		<p class="name">{{ details['商品名称'] }}</p>
@@ -62,9 +63,10 @@
 	import {mapActions, mapState} from 'vuex';
 	import topNav from '@/components/topNav';
 	import more from './more';
+	import loading from '@/components/loading';
 
 	export default {
-		components: { topNav, more },
+		components: { topNav, more, loading },
 		computed: {
 			...mapState(['detailsData'])
 		},
@@ -72,7 +74,8 @@
 			return {
 				details: {},
 				showMore: false,
-				isWeiXin: false
+				isWeiXin: false,
+				showLoad: false
 			}
 		},
 		filters: {
@@ -92,15 +95,40 @@
 			}
 		},
 		created(){
+			const handle = () => {
+				if(this.details['淘宝客短链接(300天内有效)']){
+					const o = document.createElement('img');
+					o.src = this.details['淘宝客短链接(300天内有效)'];
+				}
+			}
+
 			if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
 				this.isWeiXin = true;
 			}
 
-			if(!Object.keys(this.detailsData).length) this.$router.push('/lists/nvzhuang');
+			if(!Object.keys(this.detailsData).length){
+				this.showLoad = true;
+				this.getData(() => {
+					handle();
+				});
+				return false;
+			}
 
 			this.details = this.detailsData;
+			handle();
 		},
 		methods: {
+			getData(callback){
+				if(this.$route.params.id && this.$route.params.id.split('-').length > 1){
+					this.axios.get(`${this.apiUrl}/api/${this.$route.params.id.split('-')[0]}.json`).then((res) => {
+						this.details = res.data.data[this.$route.params.id.split('-')[1]];
+						this.showLoad = false;
+						callback && callback();
+					});
+				}else{
+					alert('error');
+				}
+			},
 			updataData(callback){
 				callback && callback(this);
 			},
@@ -108,7 +136,6 @@
 				this.goTaobao();
 				setTimeout(() => {
 					this.showMore = true;
-					this.globalNoScrol();
 				}, 300);
 			},
 			onCopy(e){
@@ -134,7 +161,7 @@
 					}else{
 						this.goTaobao();
 						setTimeout(() => {
-							window.open(this.details['淘宝客短链接(300天内有效)']);
+							window.location = this.details['淘宝客短链接(300天内有效)'];
 						}, 300);
 					}
 				}
@@ -142,7 +169,7 @@
 			getCoupon(){
 				this.goTaobao(this.details['优惠券短链接(300天内有效)']);
 				setTimeout(() => {
-					window.open(this.details['优惠券短链接(300天内有效)']);
+					window.location = this.details['优惠券短链接(300天内有效)'];
 				}, 300);
 			},
 			goTaobao(url){

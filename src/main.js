@@ -9,7 +9,7 @@ import './registerServiceWorker'
 Vue.use(VueClipboard);
 Vue.config.productionTip = false
 Vue.prototype.axios = axios
-Vue.prototype.apiUrl = 'http://192.168.1.104:3000'
+Vue.prototype.apiUrl = ''
 
 Vue.prototype.globalNoScrol = function(){
 	document.querySelector('body').classList.add('global-no-scroll');
@@ -19,6 +19,10 @@ Vue.prototype.closeGlobalNoScrol = function(){
 	document.querySelector('body').classList.remove('global-no-scroll');
 	document.querySelector('body').style.height = 'auto';
 }
+
+router.afterEach((to, from) => {
+  document.documentElement.scrollTop = 0;
+})
 
 new Vue({
 	router,
