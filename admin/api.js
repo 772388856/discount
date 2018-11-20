@@ -7,7 +7,7 @@ const TopClient = require('./sdk/lib/api/topClient').TopClient;
 const client = new TopClient({
 	'appkey': '25107141',
 	'appsecret': '64a58f2e43a8a77bbd93b0cf4c466f30',
-	'REST_URL': 'http://gw.api.tbsandbox.com/router/rest'
+	'REST_URL': 'http://gw.api.taobao.com/router/rest'
 });
 
 // 查询
@@ -30,6 +30,24 @@ const searchAPI = (key, cat, page) => {
 	})
 }
 
+// 物料
+const materialAPI = (id, page) => {
+	return new Promise((resolve, reject) => {
+		client.execute('taobao.tbk.dg.optimus.material', {
+			'material_id': id,
+			'page_no': page,
+			'adzone_id': 44748650142
+		}, (error, response) => {
+			if (!error){
+				resolve(response);
+			}else{
+				reject(error)
+			}
+		})
+	})
+}
+
 module.exports = {
-	searchAPI
+	searchAPI,
+	materialAPI
 }

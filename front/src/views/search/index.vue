@@ -56,7 +56,6 @@
 			display: flex;
 			width: 100%;
 			padding: 50px 20px;
-			font-size: 30px;
 
 			.input {
 				flex: 1;
@@ -65,6 +64,7 @@
 				border: none;
 				border-radius: 10px;
 			    background: #f4f4f4;
+			    font-size: 28px;
 			}
 			.btn {
 				margin-left: 20px;
@@ -73,6 +73,7 @@
 				border: none;
 				border-radius: 10px;
 				background: #f4f4f4;
+				font-size: 28px;
 			}
 		}
 	}

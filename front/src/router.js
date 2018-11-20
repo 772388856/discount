@@ -26,6 +26,38 @@ export default new Router({
       path: '/search',
       name: 'search',
       component: () => import('./views/search/')
+    },
+    // 物料 start
+    {
+      path: '/good/:id',
+      name: 'good',
+      component: () => import('./views/material/')
+    },
+    {
+      path: '/brand/:id',
+      name: 'brand',
+      component: () => import('./views/material/')
+    },
+    {
+      path: '/baby/:id',
+      name: 'baby',
+      component: () => import('./views/material/')
+    },
+    {
+      path: '/goods/:id',
+      name: 'goods',
+      component: () => import('./views/material/')
+    },
+    {
+      path: '/trend/:id',
+      name: 'trend',
+      component: () => import('./views/material/')
+    },
+    {
+      path: '/preferential/:id',
+      name: 'preferential',
+      component: () => import('./views/material/')
     }
+    // 物料 end
   ]
 })

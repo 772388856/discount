@@ -6,6 +6,7 @@ import axios from 'axios'
 import './registerServiceWorker'
 import VueLazyLoad from 'vue-lazyload'
 import infiniteScroll from 'vue-infinite-scroll'
+import VueInsProgressBar from 'vue-ins-progress-bar'
 
 const img = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540715371848&di=428f80876f49639f5378036bb6cb9bee&imgtype=0&src=http%3A%2F%2Fww2.sinaimg.cn%2Fbmiddle%2F5ffb33dcjw1dv21flm2nog.gif';
 Vue.use(VueLazyLoad, {
@@ -13,6 +14,11 @@ Vue.use(VueLazyLoad, {
     loading: img
 })
 Vue.use(infiniteScroll)
+Vue.use(VueInsProgressBar, {
+	position: 'fixed',
+	show: true,
+	height: '0.05rem'
+})
 
 axios.create({
 	timeout: 30000
