@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/js/chunk-37b31f8d.c800eb08.js"
   },
   {
-    "revision": "ef9018442ca75eb84943",
-    "url": "/css/chunk-6423551e.24f4e888.css"
+    "revision": "b8d62823e3960c704a3a",
+    "url": "/css/chunk-6423551e.7ece4eda.css"
   },
   {
-    "revision": "ef9018442ca75eb84943",
-    "url": "/js/chunk-6423551e.e09124fc.js"
+    "revision": "b8d62823e3960c704a3a",
+    "url": "/js/chunk-6423551e.c08a8e18.js"
   },
   {
     "revision": "e3416dd72b8d82a7b0a2",
@@ -60,7 +60,11 @@ self.__precacheManifest = [
     "url": "/js/chunk-vendors.2bf6b79c.js"
   },
   {
-    "revision": "d7b0b69e47bb28ec3a561ddadfb220a6",
+    "revision": "1ffac5011bf4aa8fd44b274bf167ba08",
+    "url": "/img/weixin_open.1ffac501.jpeg"
+  },
+  {
+    "revision": "d751b7fc64b4271311bae6cdffe51570",
     "url": "/index.html"
   },
   {
@@ -68,32 +72,36 @@ self.__precacheManifest = [
     "url": "/robots.txt"
   },
   {
+    "revision": "15d3811265876a84496121c65b4c8de0",
+    "url": "/game/luckDraw/other/jquery-1.10.2.js"
+  },
+  {
+    "revision": "1ffac5011bf4aa8fd44b274bf167ba08",
+    "url": "/img/weixin_open.jpeg"
+  },
+  {
     "revision": "c542d7b5459ad2fa9d1edaa2f1944c9b",
     "url": "/game/luckDraw/other/turnplate-bg.png"
   },
   {
-    "revision": "50cbb8b38819cae6ed52727242b02e1c",
-    "url": "/game/luckDraw/other/7acc5d1592d348cbaa9b2b9eeb374d019_theme.png"
-  },
-  {
-    "revision": "9642a1941b699eafafd7a49d6fa43fe4",
-    "url": "/game/luckDraw/other/style.css"
-  },
-  {
-    "revision": "421b1a1eeed5b6d24fa8",
-    "url": "/js/app.6df456a6.js"
+    "revision": "4031b221bef9e78d1844",
+    "url": "/js/app.d5ce49e1.js"
   },
   {
     "revision": "b00388687aa9b2b2f27a",
     "url": "/js/chunk-0c77c09e.577a0975.js"
   },
   {
-    "revision": "15d3811265876a84496121c65b4c8de0",
-    "url": "/game/luckDraw/other/jquery-1.10.2.js"
+    "revision": "9642a1941b699eafafd7a49d6fa43fe4",
+    "url": "/game/luckDraw/other/style.css"
   },
   {
     "revision": "f657f168c53fad255b64c6f3105c603a",
     "url": "/game/luckDraw/other/awardRotate.js"
+  },
+  {
+    "revision": "50cbb8b38819cae6ed52727242b02e1c",
+    "url": "/game/luckDraw/other/7acc5d1592d348cbaa9b2b9eeb374d019_theme.png"
   },
   {
     "revision": "f504e0af0fe50e0dff34ef7114ecd73e",
@@ -104,36 +112,32 @@ self.__precacheManifest = [
     "url": "/game/luckDraw/other/1.png"
   },
   {
-    "revision": "dc65c701d94f520328aa5ca9df7faed9",
-    "url": "/api/qita.json"
+    "revision": "5c53de46fba471e698d0023da7fba3cf",
+    "url": "/api/peishi.json"
   },
   {
-    "revision": "421b1a1eeed5b6d24fa8",
+    "revision": "4031b221bef9e78d1844",
     "url": "/css/app.0cfdbb47.css"
-  },
-  {
-    "revision": "7f28ba92019c0ea832463ff158edba0f",
-    "url": "/api/qiche.json"
-  },
-  {
-    "revision": "ec9b4e61e49790a8fd68c465d1ae8c95",
-    "url": "/api/tushu.json"
   },
   {
     "revision": "e38dc2dd777458cdac624f0d48ba7957",
     "url": "/api/yongpin.json"
   },
   {
-    "revision": "c12792a37ad51767abbcfe52af08c824",
-    "url": "/api/xiebao.json"
+    "revision": "eaee159af3c21a9e1c6d1d74c2de5e1e",
+    "url": "/api/shuma.json"
   },
   {
     "revision": "9901ecc967d5f3a6a4c82ce5c04a77d6",
     "url": "/api/yundong.json"
   },
   {
-    "revision": "eaee159af3c21a9e1c6d1d74c2de5e1e",
-    "url": "/api/shuma.json"
+    "revision": "ec9b4e61e49790a8fd68c465d1ae8c95",
+    "url": "/api/tushu.json"
+  },
+  {
+    "revision": "c12792a37ad51767abbcfe52af08c824",
+    "url": "/api/xiebao.json"
   },
   {
     "revision": "7cee7ec498bf2a82420c2a49b996694a",
@@ -144,8 +148,12 @@ self.__precacheManifest = [
     "url": "/api/shenghuo.json"
   },
   {
-    "revision": "5c53de46fba471e698d0023da7fba3cf",
-    "url": "/api/peishi.json"
+    "revision": "dc65c701d94f520328aa5ca9df7faed9",
+    "url": "/api/qita.json"
+  },
+  {
+    "revision": "7f28ba92019c0ea832463ff158edba0f",
+    "url": "/api/qiche.json"
   },
   {
     "revision": "fc1f557f8cdb429f12fdeee291954f9a",

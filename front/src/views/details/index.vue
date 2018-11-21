@@ -67,7 +67,7 @@
 		data(){
 			return {
 				details: {},
-				isWeiXin: false,
+				isWeiXin: true,
 				rightTopOpen: false
 			}
 		},
@@ -186,7 +186,7 @@
 		z-index: 999;
 		width: 100%;
 		height: 100%;
-		background: #000 url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541611868162&di=334805c7f67ad1726cbc1a5a14a96e92&imgtype=0&src=http%3A%2F%2Fwww.quanlaoda.com%2Fstatic%2Fteam%2F2014%2F0719%2F14057596743654.jpg) no-repeat;
+		background: #000 url(../../assets/images/common/weixin_open.jpeg) no-repeat;
 		background-size: 100%;
 	}
 </style>
