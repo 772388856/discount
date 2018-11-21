@@ -7,7 +7,7 @@
                     <i class="juan" v-if="list.reserve_price - list.zk_final_price">{{ parseFloat(list.reserve_price - list.zk_final_price).toFixed(2) }}元卷</i>
                     <img v-lazy="list.pict_url" class="img" />
                     <div class="info">
-                        <p class="name">{{ list.short_title }}</p>
+                        <p class="name">{{ list.short_title || list.title }}</p>
                         <div class="p1 item">
                             <div class="left">原价￥{{ list.reserve_price }}</div>
                             <div class="right">已售{{ list.volume }}</div>

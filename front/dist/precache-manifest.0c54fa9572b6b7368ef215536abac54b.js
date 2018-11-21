@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/js/chunk-37b31f8d.c800eb08.js"
   },
   {
-    "revision": "e37532c8a2092b8ee060",
+    "revision": "afadea4f8f5b2d3442b5",
     "url": "/css/chunk-6423551e.7ece4eda.css"
   },
   {
-    "revision": "e37532c8a2092b8ee060",
-    "url": "/js/chunk-6423551e.09a9bbe7.js"
+    "revision": "afadea4f8f5b2d3442b5",
+    "url": "/js/chunk-6423551e.e21552d5.js"
   },
   {
     "revision": "e3416dd72b8d82a7b0a2",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/img/weixin_open.1ffac501.jpeg"
   },
   {
-    "revision": "02a16d1859e7fa203a445c40fc919f2a",
+    "revision": "a16ffc233cb0bd4dd3f546e1b16aa309",
     "url": "/index.html"
   },
   {
@@ -80,12 +80,12 @@ self.__precacheManifest = [
     "url": "/game/luckDraw/other/turnplate-bg.png"
   },
   {
-    "revision": "50cbb8b38819cae6ed52727242b02e1c",
-    "url": "/game/luckDraw/other/7acc5d1592d348cbaa9b2b9eeb374d019_theme.png"
+    "revision": "9642a1941b699eafafd7a49d6fa43fe4",
+    "url": "/game/luckDraw/other/style.css"
   },
   {
-    "revision": "02f3c9ab551454e6f8bd",
-    "url": "/js/app.33955bbb.js"
+    "revision": "b38a7dfa5caa97a6851d",
+    "url": "/js/app.b9f52e8c.js"
   },
   {
     "revision": "b00388687aa9b2b2f27a",
@@ -96,8 +96,8 @@ self.__precacheManifest = [
     "url": "/game/luckDraw/other/jquery-1.10.2.js"
   },
   {
-    "revision": "9642a1941b699eafafd7a49d6fa43fe4",
-    "url": "/game/luckDraw/other/style.css"
+    "revision": "50cbb8b38819cae6ed52727242b02e1c",
+    "url": "/game/luckDraw/other/7acc5d1592d348cbaa9b2b9eeb374d019_theme.png"
   },
   {
     "revision": "f657f168c53fad255b64c6f3105c603a",
@@ -116,8 +116,8 @@ self.__precacheManifest = [
     "url": "/api/qita.json"
   },
   {
-    "revision": "02f3c9ab551454e6f8bd",
-    "url": "/css/app.0cfdbb47.css"
+    "revision": "b38a7dfa5caa97a6851d",
+    "url": "/css/app.4dbce7ab.css"
   },
   {
     "revision": "7f28ba92019c0ea832463ff158edba0f",
@@ -128,12 +128,12 @@ self.__precacheManifest = [
     "url": "/api/xiebao.json"
   },
   {
-    "revision": "e38dc2dd777458cdac624f0d48ba7957",
-    "url": "/api/yongpin.json"
-  },
-  {
     "revision": "9901ecc967d5f3a6a4c82ce5c04a77d6",
     "url": "/api/yundong.json"
+  },
+  {
+    "revision": "e38dc2dd777458cdac624f0d48ba7957",
+    "url": "/api/yongpin.json"
   },
   {
     "revision": "ec9b4e61e49790a8fd68c465d1ae8c95",
