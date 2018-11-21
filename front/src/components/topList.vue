@@ -35,6 +35,7 @@
 	    flex-direction: row;
 	    width: 100%;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
         background-color: #f9f9fa;
 
 	    li {

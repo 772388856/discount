@@ -957,6 +957,7 @@
 			background: #F4F4F4;
 			font-size: 26px;
 			overflow: auto;
+		    -webkit-overflow-scrolling: touch;
 
 			.list-item {
 				position: relative;
@@ -981,6 +982,7 @@
 		.right-item {
 			flex: 1;
 			overflow: auto;
+		    -webkit-overflow-scrolling: touch;
 
 			.title {
 				display: block;

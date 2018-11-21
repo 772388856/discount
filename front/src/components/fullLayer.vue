@@ -25,5 +25,6 @@
         background: #FFF;
         overflow-y: auto;
         overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 </style>

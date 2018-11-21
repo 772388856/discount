@@ -277,8 +277,8 @@
 				padding: 20px;
 			}
 			.nav-img {
-				width: 2rem;
-				height: 2rem;
+				width: 1.8rem;
+				height: 1.8rem;
 			}
 			.nav-text {
 				font-size: 28px;

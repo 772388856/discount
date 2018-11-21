@@ -76,6 +76,7 @@
             padding: 20px 10px;
             padding-top: 0;
             overflow: auto;
+            -webkit-overflow-scrolling: touch;
 
             li {
                 padding: 0 10px;
