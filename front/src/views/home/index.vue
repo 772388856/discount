@@ -220,6 +220,7 @@
 				});
 			},
 			openDetails(data){
+				data.coupon_share_url = data.coupon_click_url;
 				data.reserve_price = parseFloat(data.coupon_amount) + parseFloat(data['zk_final_price']);
 				this.setDetails(data);
 				this.setShowDetails(true);

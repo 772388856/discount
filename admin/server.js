@@ -30,6 +30,7 @@ app.use((req, res, next) => {
 });
 
 app.listen(80);
+// app.listen(3000);
 
 // 搜索
 app.get(`${key}/search`, (req, res) => {
