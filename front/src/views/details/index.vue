@@ -67,7 +67,7 @@
 		data(){
 			return {
 				details: {},
-				isWeiXin: true,
+				isWeiXin: false,
 				rightTopOpen: false
 			}
 		},
