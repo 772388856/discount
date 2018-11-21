@@ -22,7 +22,7 @@
 			<div class="title-box">
 				<div class="left">好卷直播</div>
 				<div class="right">今日已为用户省钱<span class="active">
-					{{ parseInt(Date.parse(new Date()) / 10000000) }}</span>元
+					{{ (Date.parse(new Date()) / 100000000).toFixed(6).split('.')[1] }}</span>元
 				</div>
 			</div>
 			<ul class="list-box">
@@ -55,7 +55,7 @@
 			<div class="title-box">
 				<div class="left">品牌卷</div>
 				<div class="right"><span class="active">
-					{{ parseInt(Date.parse(new Date()) / 100000000)*2 }}</span>次实时领卷
+					{{ (Date.parse(new Date()) / 300000000).toFixed(5).split('.')[1] }}</span>次实时领卷
 				</div>
 			</div>
 			<ul class="list-box">
@@ -277,8 +277,10 @@
 				padding: 20px;
 			}
 			.nav-img {
+				display: block;
 				width: 1.8rem;
 				height: 1.8rem;
+				margin: 0 auto;
 			}
 			.nav-text {
 				font-size: 28px;

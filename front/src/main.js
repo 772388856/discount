@@ -57,7 +57,8 @@ axios.interceptors.response.use(
 
 Vue.config.productionTip = false
 Vue.prototype.axios = axios
-Vue.prototype.apiUrl = 'http://154.211.12.133/api'
+Vue.prototype.apiUrl = '/api'
+// Vue.prototype.apiUrl = 'http://192.168.166.89:3000/api'
 
 router.afterEach((to, from) => {
 	document.documentElement.scrollTop = 0;
