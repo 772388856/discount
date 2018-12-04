@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.0c54fa9572b6b7368ef215536abac54b.js"
+  "/precache-manifest.12d6b992e399edb3b0b5cd562b0dc9ea.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "discount"});

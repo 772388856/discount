@@ -16,12 +16,12 @@ self.__precacheManifest = [
     "url": "/css/chunk-0c77c09e.7ae34286.css"
   },
   {
-    "revision": "3456598798fa7311b266",
-    "url": "/css/chunk-29dcbe83.47eaaa5b.css"
+    "revision": "b7a8a58c88cd2c78940d",
+    "url": "/css/chunk-1e80aba0.ece8b5fa.css"
   },
   {
-    "revision": "3456598798fa7311b266",
-    "url": "/js/chunk-29dcbe83.9596ef7c.js"
+    "revision": "b7a8a58c88cd2c78940d",
+    "url": "/js/chunk-1e80aba0.3cf0486d.js"
   },
   {
     "revision": "a76dde17c9833cc40321",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/img/weixin_open.1ffac501.jpeg"
   },
   {
-    "revision": "a16ffc233cb0bd4dd3f546e1b16aa309",
+    "revision": "c1c640baf9f2be65d03dc7f03f7bf472",
     "url": "/index.html"
   },
   {
@@ -76,16 +76,16 @@ self.__precacheManifest = [
     "url": "/img/weixin_open.jpeg"
   },
   {
+    "revision": "50cbb8b38819cae6ed52727242b02e1c",
+    "url": "/game/luckDraw/other/7acc5d1592d348cbaa9b2b9eeb374d019_theme.png"
+  },
+  {
     "revision": "c542d7b5459ad2fa9d1edaa2f1944c9b",
     "url": "/game/luckDraw/other/turnplate-bg.png"
   },
   {
-    "revision": "9642a1941b699eafafd7a49d6fa43fe4",
-    "url": "/game/luckDraw/other/style.css"
-  },
-  {
-    "revision": "b38a7dfa5caa97a6851d",
-    "url": "/js/app.b9f52e8c.js"
+    "revision": "d236d1fc7a911a066dc3",
+    "url": "/js/app.e2823024.js"
   },
   {
     "revision": "b00388687aa9b2b2f27a",
@@ -96,8 +96,8 @@ self.__precacheManifest = [
     "url": "/game/luckDraw/other/jquery-1.10.2.js"
   },
   {
-    "revision": "50cbb8b38819cae6ed52727242b02e1c",
-    "url": "/game/luckDraw/other/7acc5d1592d348cbaa9b2b9eeb374d019_theme.png"
+    "revision": "9642a1941b699eafafd7a49d6fa43fe4",
+    "url": "/game/luckDraw/other/style.css"
   },
   {
     "revision": "f657f168c53fad255b64c6f3105c603a",
@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/api/qita.json"
   },
   {
-    "revision": "b38a7dfa5caa97a6851d",
+    "revision": "d236d1fc7a911a066dc3",
     "url": "/css/app.4dbce7ab.css"
   },
   {
@@ -124,20 +124,20 @@ self.__precacheManifest = [
     "url": "/api/qiche.json"
   },
   {
-    "revision": "c12792a37ad51767abbcfe52af08c824",
-    "url": "/api/xiebao.json"
+    "revision": "ec9b4e61e49790a8fd68c465d1ae8c95",
+    "url": "/api/tushu.json"
   },
   {
-    "revision": "9901ecc967d5f3a6a4c82ce5c04a77d6",
-    "url": "/api/yundong.json"
+    "revision": "c12792a37ad51767abbcfe52af08c824",
+    "url": "/api/xiebao.json"
   },
   {
     "revision": "e38dc2dd777458cdac624f0d48ba7957",
     "url": "/api/yongpin.json"
   },
   {
-    "revision": "ec9b4e61e49790a8fd68c465d1ae8c95",
-    "url": "/api/tushu.json"
+    "revision": "9901ecc967d5f3a6a4c82ce5c04a77d6",
+    "url": "/api/yundong.json"
   },
   {
     "revision": "eaee159af3c21a9e1c6d1d74c2de5e1e",

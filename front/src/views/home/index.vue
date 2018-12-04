@@ -7,9 +7,9 @@
 
     	<top-list :data="topListData"></top-list>
 
-		<slider class="slider-box" ref="slider" :options="options">
-			<slideritem v-for="(item,index) in pages" :key="index" :style="item.style"></slideritem>
-		</slider>
+		<a href="https://mo.m.taobao.com/optimus/jhspt2c?pid=mm_214670079_146000351_44748650142" class="slider-box">
+			<img src="https://gw.alicdn.com/imgextra/i3/122/O1CN011ClumwLUB5eA0iI_!!122-0-lubanu.jpg" />
+		</a>
 
 		<div class="nav-box">
 			<a href="javascript:;" @click="jump(list.href)" :to="list.href" v-for="list in nav" class="nav-list">
@@ -86,7 +86,6 @@
 </template>
 
 <script>
-	import { slider, slideritem } from 'vue-concise-slider'
 	import menuApp from '@/components/menu';
 	import topList from '@/components/topList';
 	import {mapActions, mapState} from 'vuex';
@@ -95,39 +94,12 @@
 
 	export default {
 		name: 'home',
-		components: { slider, slideritem, menuApp, topList, loading, detailsItem },
+		components: { menuApp, topList, loading, detailsItem },
 		computed: {
 			...mapState(['showDetails', 'material'])
 		},
 		data(){
 			return {
-				pages: [
-					{
-						style: {
-             				background:'url(https://gw.alicdn.com/imgextra/i3/122/O1CN011ClumwLUB5eA0iI_!!122-0-lubanu.jpg)'
-						}
-					},
-					{
-						style: {
-             				background:'url(https://gw.alicdn.com/imgextra/i2/39/O1CN011C9tuuM7wmUPD7t_!!39-0-lubanu.jpg)'
-						}
-					},
-					{
-						style: {
-             				background:'url(https://img.alicdn.com/tps/i4/TB1WepikxYaK1RjSZFnSuu80pXa.jpg)'
-						}
-					},
-					{
-						style: {
-             				background:'url(https://gw.alicdn.com/imgextra/i3/151/O1CN011CzCH2JMWFioHtG_!!151-0-lubanu.jpg)'
-						}
-					}
-				],
-				options: {
-					autoplay: 3000,//自动滚动[ms]
-					loop: true,//循环滚动
-					direction: 'horizontal'
-        		},
         		showMenu: false,
         		nav: [
         			{
@@ -260,10 +232,10 @@
 			}
 		}
 		.slider-box {
-			height: 300px;
-			.slider-item {
-				background-size: cover !important;
-				background-position: center !important;
+			display: block;
+			img {
+				display: block;
+				width: 100%;
 			}
 		}
 		.nav-box {
