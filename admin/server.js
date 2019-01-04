@@ -29,8 +29,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.listen(80);
-// app.listen(3000);
+app.listen(3000);
 
 // 搜索
 app.get(`${key}/search`, (req, res) => {
@@ -91,4 +90,3 @@ app.get(`${key}/material`, (req, res) => {
         res.send(str);
     })
 });
-
